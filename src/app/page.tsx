@@ -1,7 +1,7 @@
 'use client';
 
 import Challenge1 from "./_components/calculator";
-import Header from "./_components/shared/header";
+import Navbar from "./_components/shared/header";
 import { twoSum } from "./question3";
 
 
@@ -16,10 +16,10 @@ export default function Home() {
 
   return (
     <>
-      <Header/>
+      <Navbar/>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div>
-          <h2 className="text-2xl font-semibold leading-7 text-gray-900">Challenge 1 - calculator</h2>
+          <h2 className="text-2xl font-semibold leading-7 text-gray-900">Challenge 1 - Calculator</h2>
           
           <div className="mt-4">
             <Challenge1/>
@@ -27,12 +27,12 @@ export default function Home() {
 
           <div className="mt-8">
             <h2 className="text-2xl font-semibold leading-7 text-gray-900">Challenge 2 - Navbar</h2>
-            <p>Please refer to the Navbar above</p>
+            <p>Please refer to the Navbar above (mobile view as well)</p>
           </div>
 
           <div className="mt-8">
             <h2 className="text-2xl font-semibold leading-7 text-gray-900">Challenge 3 - Two Sum II - Input Array Is Sorted</h2>
-            <p>Please refer browser console terminal to see the result (F12- windows) (fn + F12 Mac)</p>
+            <p>Please refer browser console terminal to see the result (F12 - windows) (fn + F12 - Mac)</p>
           </div>
         </div>
       </main>

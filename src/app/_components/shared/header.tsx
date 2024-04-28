@@ -1,13 +1,9 @@
 import { useState } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
-
-export default function Header() {
+export default function Navbar() {
 
     const [toggleSearch, setToggleSearch] = useState<boolean>(false);
 
@@ -80,11 +76,12 @@ export default function Header() {
                                 </div>
                             </div>
                             <div className={`flex flex-1 items-center justify-end px-2 lg:ml-6 lg:justify-end ${toggleSearch ? 'hidden' : 'block'}`}>
-                                <MagnifyingGlassIcon 
-                                    className="h-5 w-5 text-gray-400" 
-                                    aria-hidden="true"
-                                    onClick={toggleMobileSearch}
-                                />
+                                <button onClick={toggleMobileSearch}>
+                                    <MagnifyingGlassIcon 
+                                        className="h-5 w-5 text-gray-400" 
+                                        aria-hidden="true"
+                                    />
+                                </button>
                             </div>
                             <div className={`flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end ${toggleSearch ? 'block' : 'hidden'}`}>
                                 <div className="w-full max-w-lg lg:max-w-xs">
