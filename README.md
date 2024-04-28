@@ -29,3 +29,7 @@ If want to exit the container
 ```
 exit
 ```
+
+## MCQ answers
+
+Please refer to MCQ.txt
