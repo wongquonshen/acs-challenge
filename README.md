@@ -1,6 +1,6 @@
 # AEON Challenge
 
-## prerequisite
+## Prerequisite
 
 You will need to install the latest docker app in your machine and install according to your architecture
 
