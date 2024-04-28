@@ -2,7 +2,7 @@ export function twoSum(numbers: number[], target: number): number[] {
     let left = 0;
     let right = numbers.length - 1;
     
-    while (left < right) {
+    while (left < right) {        
         // sum the first and last numbers in the array
         let sum = numbers[left] + numbers[right];
 
