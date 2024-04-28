@@ -12,4 +12,5 @@ services:
     environment:
       NODE_ENV: development
       NEXT_TELEMETRY_DISABLED: 1
+      PORT: 4450
     command: npm run dev
