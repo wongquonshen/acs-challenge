@@ -8,9 +8,9 @@ https://www.docker.com/products/docker-desktop/
 
 ## Development setup
 
-Lets install the node packages first
+Lets install the node packages first which run command ``run npm install``
 ```
-make install # run npm install
+make install
 ```
 
 Start docker container
