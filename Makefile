@@ -1,13 +1,19 @@
 PROJECT_NAME=aeon-challenge
 
-up: ## start the containers
+love: ## start the containers
+	$(info Making love......)
 	docker-compose -p $(PROJECT_NAME) -f docker/dev.yml up -d
+	$(info Love had been made!)
 
 connect: ## SSH to the php container
+	$(info Connecting to super container)
 	docker-compose -p $(PROJECT_NAME) -f docker/dev.yml exec node sh
+	$(info Connected to super container)
 
-down: ## bring down the containers
+abort: ## bring down the containers
+	$(info Aborting humanity....)
 	docker-compose -p ${PROJECT_NAME} -f docker/dev.yml down
+	$(info Abortion completed!)
 
 install: ## Run npm install
 	docker-compose -p $(PROJECT_NAME) -f docker/dev.yml run --rm node npm install

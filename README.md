@@ -19,7 +19,7 @@ make install
 
 Start docker container
 ```
-make up
+make love
 ```
 
 Then open https://localhost:8450/ in browser
@@ -32,4 +32,9 @@ make connect
 If want to exit the container
 ```
 exit
+```
+
+Destroy container
+```
+make abort
 ```

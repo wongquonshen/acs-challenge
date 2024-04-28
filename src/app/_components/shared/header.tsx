@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -23,10 +24,12 @@ export default function Navbar() {
                                 <div className="flex flex-shrink-0 items-center">
                                 <a className='flex items-center' href="/">
                                     AEON
-                                    <img
+                                    <Image
                                         className="h-10 w-auto ml-2"
                                         src="https://media1.tenor.com/m/NVwxxoyoyGgAAAAd/racoon-pedro.gif"
                                         alt="Your Company"
+                                        height={40}
+                                        width={40}
                                     />
                                 </a>
                                 </div>
