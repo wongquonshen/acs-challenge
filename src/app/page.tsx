@@ -32,7 +32,7 @@ export default function Home() {
 
           <div className="mt-8">
             <h2 className="text-2xl font-semibold leading-7 text-gray-900">Challenge 3 - Two Sum II - Input Array Is Sorted</h2>
-            <p>Please refer browser console terminal to see the result (F12 - windows) (fn + F12 - Mac)</p>
+            <p>Please refer browser console terminal to see the console log result (F12 - windows) (fn + F12 - Mac)</p>
           </div>
         </div>
       </main>
