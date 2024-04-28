@@ -1,5 +1,9 @@
 # AEON Challenge
 
+## MCQ answers
+
+Please refer to MCQ.txt
+
 ## Prerequisite
 
 You will need to install the latest docker app in your machine and install according to your architecture
@@ -29,7 +33,3 @@ If want to exit the container
 ```
 exit
 ```
-
-## MCQ answers
-
-Please refer to MCQ.txt
