@@ -1,10 +1,19 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function Challenge1() {
     
     const [firstNumber, setFirstNumber] = useState<number | null>(null);
     const [secondNumber, setSecondNumber] = useState<number | null>(null);
     const [total, setTotal] = useState<number | null>(null);
+    const [toggleButton, setToggleButton] = useState<boolean>(true);
+
+    useEffect(() => {
+        // disable add number button if none of the field are filled appropriately
+        //isNaN is checked due to parseFloat returning NaN when empty
+        setToggleButton(!(firstNumber !== null && secondNumber !== null && !isNaN(firstNumber) && !isNaN(secondNumber)));
+    // this comment is used for typescript dependency warning as I left out toggleButton due to looping bug by useEffect
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [firstNumber, secondNumber]);
 
     /**
      * 
@@ -18,7 +27,6 @@ export default function Challenge1() {
         if (firstNumber !== null && secondNumber !== null) {
             setTotal(firstNumber + secondNumber);
         }
-
     }
 
     return (
@@ -54,7 +62,8 @@ export default function Challenge1() {
 
                         <button
                             type="submit"
-                            className="w-full rounded bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-4"
+                            className="w-full rounded bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:bg-indigo-300 disabled:cursor-not-allowed mt-4"
+                            disabled={toggleButton}
                         >
                             Add Two Numbers
                         </button>
